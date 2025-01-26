@@ -13,12 +13,16 @@ import java.util.List;
 
 @RestController
 public class StudentController {
-    private List<Student> students = new ArrayList<>(
-            List.of(
-                    new Student(1, "Navin", 60),
-                    new Student(2, "Kiran", 65)
-            ));
+    private final List<Student> students;
 
+    public StudentController() {
+        this.students = new ArrayList<>(
+                List.of(
+                        new Student(1, "Navin", 60),
+                        new Student(2, "Kiran", 65)
+                )
+        );
+    }
 
     @GetMapping("/students")
     public List<Student> getStudents() {

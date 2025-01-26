@@ -1,5 +1,5 @@
 package com.landa.SpringSecurityEx.model;
-
+import java.lang.String;
 import lombok.*;
 
 @Setter
@@ -7,7 +7,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
 public class Student {
     private int id;
     private String name;
